@@ -1,10 +1,14 @@
-# Yew-rs + Tailwind CSS (ft Bun!???)
-A simple template project using a router and Tailwind CSS to style a 
-little the page. The goal is to learn Yew to develop full-stack apps 
-with Rust, without having to use any JS/TS code if possible.
+# Yew-rs Homework
+
+A homework done with Yew-rs and Tailwind CSS. It is just a blog entry about a
+fake travel to Tokyo written for my English class at the university. Feel free
+to use it as you want.
 
 ## Features
-+ [ ] Implements a routing system (work-in-progress)
-+ [x] Implements styling with Tailwind CSS
-+ [ ] Implements state management (like React's context API or Zustand)
-+ [ ] Implements a server state management system (like TanStack Query for the Web)
+
+It uses [Yew-rs](https://yew.rs) and [Tailwind CSS](https://tailwindcss.com) to
+produce the page. At this moment, I have no plans to keep this work up to date,
+but you can always fork it and modify it.
+
+The colorscheme tries to mimic the
+[Tokyo Night Theme](https://github.com/folke/tokyonight.nvim).
