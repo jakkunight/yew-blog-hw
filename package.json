@@ -1,0 +1,10 @@
+{
+  "dependencies": {},
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  },
+  "scripts": {
+    "build": "tailwindcss -i ./styles/main.css -o ./styles/output.css",
+    "watch": "bun run build -- --watch"
+  }
+}

@@ -1,0 +1,19 @@
+# Devenv
+.devenv*
+devenv.local.nix
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
+
+
+# Added by cargo
+/target
+
+# Added by Bun
+node_modules
+
+# Added by Trunk
+dist
