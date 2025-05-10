@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Install WASM target for Rust
+        run: rustup target add wasm32-unknown-unknown
       - name: Install Trunk
         run: cargo install trunk
       - name: Build Yew App
