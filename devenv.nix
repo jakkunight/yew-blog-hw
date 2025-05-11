@@ -1,6 +1,10 @@
-{ pkgs, lib, config, inputs, ... }:
-
 {
+  pkgs,
+  lib,
+  config,
+  inputs,
+  ...
+}: {
   # https://devenv.sh/basics/
   env = {};
 
@@ -14,7 +18,14 @@
   ];
 
   # https://devenv.sh/scripts/
-  scripts = {};
+  scripts = {
+    deploy.exec = ''
+      echo "[INFO] Building application..."
+      trunk build --release
+      echo "[INFO] Building CSS assets..."
+      bun run build
+    '';
+  };
 
   enterShell = ''
   '';
@@ -25,17 +36,17 @@
 
   # https://devenv.sh/services/
   services = {
- #    postgres = {
- #      enable = true;
- #      initialDatabases = [
-	# {
-	#   user = "user";
-	#   pass = "password";
-	#   name = "columbia-moodle";
-	#   schema = ./columbia-moodle.sql;
-	# }
- #      ];
- #    };
+    #    postgres = {
+    #      enable = true;
+    #      initialDatabases = [
+    # {
+    #   user = "user";
+    #   pass = "password";
+    #   name = "columbia-moodle";
+    #   schema = ./columbia-moodle.sql;
+    # }
+    #      ];
+    #    };
   };
 
   # https://devenv.sh/languages/
@@ -47,8 +58,8 @@
       enable = true;
       channel = "stable";
       targets = [
-	"wasm32-unknown-unknown"
-	"x86_64-unknown-linux-gnu"
+        "wasm32-unknown-unknown"
+        "x86_64-unknown-linux-gnu"
       ];
     };
     typescript = {
