@@ -21,7 +21,7 @@
   scripts = {
     deploy.exec = ''
       echo "[INFO] Building application..."
-      trunk build --release
+      trunk build --release --public-url /yew-blog-hw/
       echo "[INFO] Building CSS assets..."
       bun run build
     '';
